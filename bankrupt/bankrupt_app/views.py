@@ -17,9 +17,13 @@ def call_me(request):
         i_data = json.loads(request.body)
         print(i_data["phone"], i_data["name"])
 
-        Calls(phone=i_data["phone"]).save()
+        try:
+            Calls(name=i_data["name"], phone=i_data["phone"]).save()
+            data = {"status": "success"}
+        except Exception as e:
+            print(e)
+            data = {"status": "error"}
 
-        data = {"status": "success"}
         return HttpResponse(json.dumps(data), content_type="application/json")
 
 @csrf_exempt

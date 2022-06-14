@@ -34,11 +34,14 @@ calls_status = (
 )
 
 class Calls(models.Model):
+    name = models.CharField(max_length=300, unique=False, null=True, blank=True)
     phone = models.CharField(max_length=20, unique=True)
     status = models.CharField(max_length=2, choices=calls_status, default="N")
     comment = models.TextField(max_length=300, null=True, blank=True)
+    created_at = models.DateTimeField(auto_now_add=True, blank=True, null=True)
+    updated_at = models.DateTimeField(auto_now=True, blank=True, null=True)
 
     class Meta:
         verbose_name = 'Звонок'
         verbose_name_plural = 'Звонки'
-        ordering = ["-status"]
+        # ordering = ["-status", "-created_at", "-updated_at"]

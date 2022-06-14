@@ -11,7 +11,8 @@ class AnswersAdmin(admin.ModelAdmin):
     list_display = ["question_id", "answer"]
 
 class CallsAdmin(admin.ModelAdmin):
-    list_display = ["phone", "status", "comment"]
+    list_display = ["phone", "name", "status",  "comment", "updated_at", "created_at"]
+    readonly_fields = ["updated_at", "created_at"]
 
 
 admin.site.register(Questions, QuestionsAdmin)
