@@ -5,11 +5,13 @@ from django.shortcuts import render
 
 # Create your views here.
 from django.views.decorators.csrf import csrf_exempt
+
+from bankrupt import settings
 from .models import Calls
 
 
 def index(request):
-    return HttpResponse("Hello World")
+    return render(request, 'bankrupt_app/index.html')
 
 @csrf_exempt
 def call_me(request):

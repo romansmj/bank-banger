@@ -13,6 +13,9 @@ class Questions(models.Model):
     type = models.CharField(max_length=2, choices=question_types, default="OP")
 
 
+    def __str__(self):
+        return self.question
+
     class Meta:
         verbose_name = 'Вопрос'
         verbose_name_plural = 'Вопросы'
@@ -21,6 +24,9 @@ class Questions(models.Model):
 class Answers(models.Model):
     question_id = models.IntegerField()
     answer = models.TextField(max_length=300, default="")
+
+    def __str__(self):
+        return self.answer
 
     class Meta:
         verbose_name = 'Ответ'
@@ -40,6 +46,9 @@ class Calls(models.Model):
     comment = models.TextField(max_length=300, null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True, blank=True, null=True)
     updated_at = models.DateTimeField(auto_now=True, blank=True, null=True)
+
+    def __str__(self):
+        return self.name
 
     class Meta:
         verbose_name = 'Звонок'
