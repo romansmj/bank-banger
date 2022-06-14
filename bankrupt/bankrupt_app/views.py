@@ -1,6 +1,7 @@
+from django.http import HttpResponse
 from django.shortcuts import render
 
 # Create your views here.
 
 def index(request):
-    return "Hello world"# return render(request, 'shop/index.html', context=context)
+    return HttpResponse("Hello World")
