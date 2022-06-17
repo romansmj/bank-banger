@@ -18,6 +18,7 @@ class API_Tester():
         print(json.loads(result.text))
 
 
+
 api = API_Tester("127.0.0.1", 8000)
 
 data = {
