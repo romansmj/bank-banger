@@ -1,20 +1,26 @@
 html,
 body {
-    height: 100%;
+    /*height: 100vh;*/
     scroll-behavior: smooth;
 }
 
 section {
     position: relative;
-    min-height: 100vh;
+    /*min-height: 100vh;*/
 }
 
-.navbar {
+footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+/*.navbar {
     height: 70px;
-}
+}*/
 
-.nav-item {
+/*.nav-item {
     margin-left: 5px;
     margin-right: 5px;
     font-size: 13pt;
-}
+}*/

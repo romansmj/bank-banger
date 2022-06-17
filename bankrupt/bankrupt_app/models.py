@@ -11,6 +11,7 @@ question_types = (
 class Questions(models.Model):
     question = models.TextField(max_length=300, default="")
     type = models.CharField(max_length=2, choices=question_types, default="OP")
+    position = models.IntegerField(unique=True)
 
 
     def __str__(self):

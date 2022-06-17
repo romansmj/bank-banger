@@ -21,13 +21,7 @@ class API_Tester():
 api = API_Tester("127.0.0.1", 8000)
 
 data = {
-    "phone": "+79758889900",
-    "name": "New Lead"
-}
-api.call_me(data)
-
-data = {
-    "phone": "+79658889911",
-    "name": "Admin"
+    "phone": "+78005553535",
+    "name": "Новый лид"
 }
 api.call_me(data)

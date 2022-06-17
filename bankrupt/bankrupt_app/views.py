@@ -7,11 +7,15 @@ from django.shortcuts import render
 from django.views.decorators.csrf import csrf_exempt
 
 from bankrupt import settings
-from .models import Calls
+from .models import *
 
 
 def index(request):
-    return render(request, 'bankrupt_app/index.html')
+    context = {
+        "Questions": reversed(Questions.objects.all()),
+        "Answers": Answers.objects.all()
+    }
+    return render(request, 'bankrupt_app/index.html', context=context)
 
 @csrf_exempt
 def call_me(request):

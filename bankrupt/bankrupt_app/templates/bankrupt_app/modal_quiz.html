@@ -1,0 +1,61 @@
+<div class="container">
+    <div class="row">
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal_quiz">
+            Quiz
+        </button>
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="modal_quiz" tabindex="-1" aria-labelledby="" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Ответьте на 7 вопросов и получите 3 варианта решения проблем с долгами</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="accordion" id="accordionExample">
+                    {% for q in Questions %}
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="question_{{q.id}}">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_{{q.id}}" aria-expanded="false" aria-controls="collapseTwo">
+                                {{ q }}
+                            </button>
+                        </h2>
+                        <div id="collapse_{{q.id}}" class="accordion-collapse collapse" aria-labelledby="question_{{q.id}}" data-bs-parent="#accordionExample" style="">
+                            <div class="accordion-body">
+                                <ul class="list-group">
+                                    {% for a in Answers %}
+                                    {% if a.question_id == q.id %}
+                                    <li class="list-group-item">
+                                        <input class="form-check-input" type="checkbox" value="" id="answer_{{q.id}}_{{ a.id }}">
+                                        <label class="form-check-label">
+                                            {{ a }}
+                                        </label>
+                                    </li>
+                                    {% endif %}
+                                    {% endfor %}
+                                    {% if q.type == "OP" %}
+                                    <li class="list-group-item">
+                                        <input class="form-control" list="datalistOptions" id="answer_{{q.id}}_another" placeholder="Другое">
+                                    </li>
+                                    {% else %}
+                                    <li class="list-group-item">
+                                        <input class="form-control" list="datalistOptions" id="answer_{{q.id}}_another" placeholder="">
+                                    </li>
+                                    {% endif %}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                <button type="button" class="btn btn-primary">Отправить</button>
+            </div>
+        </div>
+    </div>
+</div>
