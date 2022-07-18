@@ -5,13 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bank Banger</title>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <!-- fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- theme -->
     <link rel="stylesheet" href="../front/style/dark.css" id="theme">
 </head>
 <body>
@@ -38,9 +38,9 @@
                     Сменить тему
                   </a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link active tel" aria-current="page" href="tel:+78005553535">Звоните бесплатно: 8 800 555-35-35</a>
-                </li>
+                  <li class="nav-item tel">
+                    <a class="nav-link active" aria-current="page" href="tel:+78005553535">Звоните бесплатно: 8 800 555-35-35</a>
+                  </li>
               </ul>
             </div>
           </div>
@@ -62,10 +62,10 @@
             </h2>
           </div>
           <div class="container scrolldown" data-spy="scroll" data-target="#scrollspyHeading1" data-offset="0">
-            <p class="arrow-down"><i class="arrow down"></i></p>
+            <p class="arrow-down" id="scrollToCards"><i class="arrow down"></i></p>
           </div>
         </div>
-            <div class="secondScreen" id="scrollspyHeading1">
+            <div class="secondScreen" id="cards">
               <div class="row">
                   <div class="card col-sm-3 col-md-3">
                     <img class="card-img-top w-100" src="#" alt="Card image cap">
@@ -120,7 +120,7 @@
         <div class="status"></div>
       </div>
     </main>
-    <footer class="footer">
+    <footer class="footer" id="footer">
         <p>
           ООО "Bank Banger"<br>
           ИНН 0000000000 <br>
@@ -134,8 +134,7 @@
         </p>
     </footer>
 </body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
-<script src="../front/js/main.js"></script>
+<script src="../front/js/scroll.js"></script>
 <script src="../front/js/theme.js"></script>
 </html> 
