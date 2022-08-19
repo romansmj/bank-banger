@@ -1,18 +1,38 @@
 body {
-  background: linear-gradient(315deg, #000000 0%, #414141 74%);
+  background: linear-gradient(315deg, #000000 0%, #313131 74%);
   font-family: 'Roboto', Arial, sans-serif;
 }
+.navbar-nav {
+  margin-left: auto;
+}
 .navbar {
-  height: 60px;
+  height: 75px;
   width: 100%;
 }
 .navbar-brand {
-  font-size: 30px;
+  font-size: 50px;
   font-family: 'Bebas Neue', cursive;
-  display: block;
+  color: rgb(255, 208, 67) !important;
+}
+.navbar-brand:hover {
+  font-size: 50px;
+  font-family: 'Bebas Neue', cursive;
+  color: rgb(221, 169, 14) !important;
+  transition: 0.3s;
+}
+.info {
+  cursor: pointer;
 }
 .theme-button {
   cursor: pointer;
+}
+.nav-link {
+  color: #ffffff !important;
+  font-size: large;
+}
+.nav-link:hover {
+  color: rgb(221, 169, 14) !important;
+  transition: 0.3s;
 }
 .h1 {
   padding-top: 10px;
@@ -40,6 +60,15 @@ body {
   margin-top: 50px;
   cursor: pointer;
 }
+.arrow:hover {
+  transition: 0.3s;
+  border: solid rgb(221, 169, 14);
+  border-width: 0 6px 6px 0;
+  display: inline-block;
+  padding: 6px;
+  margin-top: 50px;
+  cursor: pointer;
+}
 .down {
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
@@ -47,10 +76,6 @@ body {
 .arrow-down {
   text-align: center;
   margin: auto;
-}
-.row {
-  margin-top: 50px;
-  margin-bottom: 50px;
 }
 .text {
   text-align: center;
@@ -74,6 +99,9 @@ h2.text {
   display: flex;
   justify-content: space-between;
 }
+.wrapper-2 {
+  margin-top: 100px;
+}
 .img {
   width: 100px;
   display: block;
@@ -81,6 +109,7 @@ h2.text {
 }
 .card {
   width: 250px;
+  border: 2px solid rgb(221, 169, 14);
 }
 .card-title {
   padding: 15px 0px;
@@ -116,11 +145,3 @@ h2.text {
   text-align: center;
   margin-top: 100px;
 }
-
-/* @media (min-width: 576px) { ... }
-
-@media (min-width: 768px) { ... }
-
-@media (min-width: 992px) { ... }
-
-@media (min-width: 1200px) { ... } */
