@@ -1,5 +1,5 @@
 body {
-  background: linear-gradient(315deg, #d2d7de 0%, #d5d9e0 74%);
+  background: linear-gradient(315deg, #F6F2F2 0%, #D9D9D9 74%);
   font-family: 'Roboto', Arial, sans-serif;
 }
 .navbar-nav {
@@ -13,6 +13,7 @@ body {
   font-size: 50px;
   font-family: 'Bebas Neue', cursive;
   color: rgb(255, 208, 67) !important;
+  transition: 0.3s;
 }
 .navbar-brand:hover {
   font-size: 50px;
@@ -49,15 +50,16 @@ body {
   display: block;
   margin: auto;
   width: 70%;
-  border: solid black;
+  box-shadow: 5px 5px 5px black;
   border-radius: 30px;
 }
 .arrow {
+  transition: 0.3s;
   border: solid black;
   border-width: 0 6px 6px 0;
   display: inline-block;
   padding: 6px;
-  margin-top: 50px;
+  margin-top: 15px;
   cursor: pointer;
 }
 .arrow:hover {
@@ -66,7 +68,7 @@ body {
   border-width: 0 6px 6px 0;
   display: inline-block;
   padding: 6px;
-  margin-top: 50px;
+  margin-top: 15px;
   cursor: pointer;
 }
 .down {
@@ -76,10 +78,6 @@ body {
 .arrow-down {
   text-align: center;
   margin: auto;
-}
-.row {
-  margin-top: 50px;
-  margin-bottom: 50px;
 }
 .text {
   text-align: center;
@@ -95,29 +93,23 @@ h2.text {
   margin: auto;
   color: black;
 }
-.secondScreen {
-  text-align: center;
-}
-.wrapper {
-  display: flex;
-  justify-content: space-between;
-}
-.wrapper-2 {
-  margin-top: 100px;
-}
 .img {
   width: 100px;
   display: block;
   margin: auto;
 }
 .card {
-  width: 250px;
-  border: 2px solid rgb(221, 169, 14);
+  box-shadow: 5px 5px 5px black;
+  border-radius: 30px;
+  text-align: center;
+  transition: 0.3s;
+}
+.card:hover {
+  background-color: rgb(221, 169, 14);
+  transition: 0.3s;
 }
 .card-title {
-  padding: 15px 0px;
   text-transform: uppercase;
-  margin: auto;
 }
 .card-text {
   text-align: center;
@@ -130,17 +122,22 @@ h2.text {
   color: black;
   margin-bottom: 35px;
 }
+.form-control:focus {
+  border-color: rgb(221, 169, 14);
+  box-shadow: rgba(221, 169, 14, 0.16) 0px 1px 4px, rgb(221, 169, 14) 0px 0px 0px 3px;
+}
 .submit {
   width: 300px;
   height: 50px;
   background-color: rgb(0, 0, 0);
   color: rgb(255, 255, 255);
   text-align: center;
+  transition: 0.3s;
 }
 .submit:hover {
   background-color: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
-  transition: 0.5s;
+  transition: 0.3s;
 }
 .footer {
   color: black;
@@ -148,3 +145,36 @@ h2.text {
   text-align: center;
   margin-top: 100px;
 }
+@media (max-width: 576px) {
+  /* .nav-link {
+    color: white !important; 
+    background: linear-gradient(315deg, #000000 0%, #313131 74%) !important;
+  } */
+  .image {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  /* .nav-link {
+    color: white !important; 
+    background: linear-gradient(315deg, #000000 0%, #313131 74%) !important;
+  } */
+  .image {
+    width: 100%;
+  }
+}
+@media (max-width: 992px) {
+  /* .nav-link {
+    color: white !important; 
+    background: linear-gradient(315deg, #000000 0%, #313131 74%) !important;
+  } */
+  .image {
+    width: 100%;
+  }
+}
+/* @media (max-width: 1200px) {
+  
+}
+@media (max-width: 1400px) {
+  
+} */
