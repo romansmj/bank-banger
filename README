@@ -1,4 +1,4 @@
 stack:
   bootstrap 5
-  telebot(pyTelegramBotAPI)
-  pure js
+  python telebot(pyTelegramBotAPI)
+  javascript
